@@ -16,5 +16,7 @@
   "block.tutorialmod.nether_sapphire_ore": "Nether Sapphire Ore",
   "block.tutorialmod.end_stone_sapphire_ore": "End Stone Sapphire Ore",
 
+  "tooltip.tutorialmod.metal_detector.tooltip": "Finds valuables underground!",
+
   "creativetab.tutorial_tab": "Sapphire Tutorial Tab"
 }
