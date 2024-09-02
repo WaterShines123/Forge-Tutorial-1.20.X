@@ -24,13 +24,16 @@ public class MetalDetectorItem extends Item {
             boolean foundBlock = false;
 
             for(int i = 0; i <= positionClicked.getY() + 64; i++) {
-                BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
-                if(isValuableBlock(state)) {
-                    outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
-                    foundBlock = true;
+                for(int x = -1; x < 2; x++) {
+                    for(int z = -1; z < 2; z++) {
+                        BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i).north(x).east(z));
+                        if(isValuableBlock(state)) {
+                            outputValuableCoordinates(positionClicked.below(i).north(x).east(z), player, state.getBlock());
+                            foundBlock = true;
 
-                    break;
-
+                            //break;
+                        }
+                    }
                 }
             }
             if(!foundBlock) {
